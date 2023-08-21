@@ -6,19 +6,29 @@ Beanstalk Deployment
     > Fastest
     > Drawback is instances that aren't available to serve traffic for a bit
     > Traffic downtime during depoyment
+    > no additional cost
 
 > Rolling : 
     > Update a few instances at a time
     > Moves onto the next bucket or instance once the previous one is healthy
+    > Application not running at capacity
+    > No additional cost
+
 > Rolling with additional batches : 
     > Old application still available
     > Spins up new instances instead of updating the previous instance
+    > small additional cost
+    > Great for production
+
 > Immutable :
     > spins up new instances in a new ASG
     > deploys version to these instances 
     > swaps all the instances when everything is healthy
+    > zero downtime
 > Blue Green :
     > creates a new environment
     > switch over when ready
+    > zero down time
+    > swap url when green
 > Traffic Splitting
   > Canary Testing - sends a small % of traffic to new deployment
