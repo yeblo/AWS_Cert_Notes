@@ -1,1 +1,24 @@
 
+Beanstalk Deployment
+
+> All At Once (In Place): 
+    > Deploy all in one go. 
+    > Fastest
+    > Drawback is instances that aren't available to serve traffic for a bit
+    > Traffic downtime during depoyment
+
+> Rolling : 
+    > Update a few instances at a time
+    > Moves onto the next bucket or instance once the previous one is healthy
+> Rolling with additional batches : 
+    > Old application still available
+    > Spins up new instances instead of updating the previous instance
+> Immutable :
+    > spins up new instances in a new ASG
+    > deploys version to these instances 
+    > swaps all the instances when everything is healthy
+> Blue Green :
+    > creates a new environment
+    > switch over when ready
+> Traffic Splitting
+  > Canary Testing - sends a small % of traffic to new deployment
