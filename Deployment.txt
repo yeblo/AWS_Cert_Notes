@@ -16,4 +16,41 @@ Rolling deployment : the fleet is divided into portions so that all of the fleet
 
 
 
+Beanstalk Deployment
+
+> All At Once (In Place): 
+    > Deploy all in one go. 
+    > Fastest
+    > Drawback is instances that aren't available to serve traffic for a bit
+    > Traffic downtime during depoyment
+    > no additional cost
+
+> Rolling : 
+    > Update a few instances at a time
+    > Moves onto the next bucket or instance once the previous one is healthy
+    > Application not running at capacity
+    > No additional cost
+
+> Rolling with additional batches : 
+    > Old application still available
+    > Spins up new instances instead of updating the previous instance
+    > small additional cost
+    > Great for production
+
+> Immutable :
+    > spins up new instances in a new ASG
+    > deploys version to these instances 
+    > swaps all the instances when everything is healthy
+    > zero downtime
+    > In this mode, a full set of new instances running the new version of the application in a separate Auto Scaling Group is launched. 
+      To roll back quickly, this mode terminates the ASG holding the new application version, while the current one is untouched and already running         at full capacity.
+> Blue Green :
+    > creates a new environment
+    > switch over when ready
+    > zero down time
+    > swap url when green
+> Traffic Splitting
+  > Canary Testing - sends a small % of traffic to new deployment
+
+
 IAM database authentication works with MariaDB, MySQL, and PostgreSQL
