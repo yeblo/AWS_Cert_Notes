@@ -62,9 +62,28 @@ Kinesis
     - Makes it easy to collect, process and analyze streaming data in real time.
     -ingest real time data such as application logs, metrics, web clickstreeams, IoT telemetry data
     -Kinesis Datastreams
-        - shards
+        - streaming service for ingest at scale
+        - real time
+        - manage scaling (shard splitting/ shard merging)
+        - Data storage for 1 to 365 days
+        - Supports replay capability
+        -use  a highly distributed partition key to avoid hot partitions
+        - retries with exponential back off
+        - increase shards when needed
+        - 1 mb/sec for Producers
+        - 2 mb/sec for consumers
+        
     -Kinesis Firehose
+        - Producer : Applcation, kinesis data streams
+        - Destination - Amazon s3, redshift, amazon opensearch, http endpoint (custom destination)
+        - filly managed
+        - near real time
+        - no data storage
+        - doesnt support replay capability
+            
+    
     -Kinesis Analytics
+
 
 
 
