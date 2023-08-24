@@ -34,3 +34,38 @@ Beanstalk Deployment
     > swap url when green
 > Traffic Splitting
   > Canary Testing - sends a small % of traffic to new deployment
+
+Queues
+    -Standard Queue
+        - Retention Period -> 4 to 14 days
+        - each message has a max size of 256 kb
+        - Producers vs consumers
+        - Send message vs Poll message (received)
+    - FIFO Queues
+    SQS Access Polocy
+        - cross account access
+        - Publish s3 event notification to SQS queue
+    Dead Letter Queue
+        - used for debugging messages that exceed maximum receives
+        - The dead letter queue of a standard queue must be a standard queue
+        - The dead letter queue of a FIFO Queue must be a FIFO Queue
+    Long Polling
+        - if the consumer is making alot of api calls, this is adivisable to use
+
+SNS 
+    - Publisher / Subscription
+    - These helps with bulk messaging or anything subscription based. 
+    - A filter policy can be added to the Topic based on where messages should end up
+    - message receivers can be email, SQS, http e.t.c
+
+Kinesis
+    - Makes it easy to collect, process and analyze streaming data in real time.
+    -ingest real time data such as application logs, metrics, web clickstreeams, IoT telemetry data
+    -Kinesis Datastreams
+        - shards
+    -Kinesis Firehose
+    -Kinesis Analytics
+
+
+
+
