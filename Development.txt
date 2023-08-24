@@ -57,6 +57,8 @@ SNS
     - These helps with bulk messaging or anything subscription based. 
     - A filter policy can be added to the Topic based on where messages should end up
     - message receivers can be email, SQS, http e.t.c
+Fan OUt Approach:
+This is a common pattern where only one message is sent to the SNS topic and then "fan-out" to multiple SQS queues. This approach has the following features: it's fully decoupled, no data loss, and you have the ability to add more SQS queues (more applications) over time.
 
 Kinesis
     - Makes it easy to collect, process and analyze streaming data in real time.
@@ -72,7 +74,7 @@ Kinesis
         - increase shards when needed
         - 1 mb/sec for Producers
         - 2 mb/sec for consumers
-        
+        - Kinesis Data Stream uses the partition key associated with each data record to determine which shard a given data record belongs to. When you use the identity of each user as the partition key, this ensures the data for each user is ordered hence sent to the same shard.        
     -Kinesis Firehose
         - Producer : Applcation, kinesis data streams
         - Destination - Amazon s3, redshift, amazon opensearch, http endpoint (custom destination)
