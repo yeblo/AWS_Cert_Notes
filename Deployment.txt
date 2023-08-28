@@ -56,3 +56,19 @@ Beanstalk Deployment
 IAM database authentication works with MariaDB, MySQL, and PostgreSQL
 
 
+>ECS
+    > Task Definitions
+        > Image Name
+        > Port Binding
+        > Memory and CPU required
+        > Environment variables
+        > Networking Information
+        > Iam ROle
+        > Logging Configuration
+    > Task placement strategies
+        >Binpack -> minimizes the use of EC2 intances
+        >Randomly
+        >Spread -> spread task evenly accross EC2 instances
+    >AWS copilot
+
+
