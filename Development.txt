@@ -87,6 +87,22 @@ Kinesis
     -Kinesis Analytics
 
 
+Global secondary index — an index with a partition key and a sort key that can be different from those on the base table. A global secondary index is considered “global” because queries on the index can span all of the data in the base table, across all partitions.
+
+Local secondary index — an indexhna that has the same partition key as the base table, but a different sort key. A local secondary index is “local” in the sense that every partition of a local secondary index is scoped to a base table partition that has the same partition key value.
+
+Memcached is a more suitable choice since the scenario specifies that the system will run large nodes with multiple cores or threads which Memcached can adequately provide.
+
+You can choose Memcached over Redis if you have the following requirements:
+
+– You need the simplest model possible.
+
+– You need to run large nodes with multiple cores or threads.
+
+– You need the ability to scale out and in, adding and removing nodes as demand on your system increases and decreases.
+
+– You need to cache objects, such as a database.
+
 
 
 
