@@ -103,6 +103,12 @@ You can choose Memcached over Redis if you have the following requirements:
 
 – You need to cache objects, such as a database.
 
+AWS X-Ray works with Amazon EC2, Amazon EC2 Container Service (Amazon ECS), AWS Lambda, and AWS Elastic Beanstalk. You can use X-Ray with applications written in Java, Node.js, and .NET that are deployed on these services.
+
+AWS CloudTrail is incorrect because this will only enable you to track all API calls to your Lambda, DynamoDB, and SNS. It is still better to use AWS X-Ray to debug your application.
+
+
+
 
 
 
