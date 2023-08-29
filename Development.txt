@@ -107,8 +107,9 @@ AWS X-Ray works with Amazon EC2, Amazon EC2 Container Service (Amazon ECS), AWS 
 
 AWS CloudTrail is incorrect because this will only enable you to track all API calls to your Lambda, DynamoDB, and SNS. It is still better to use AWS X-Ray to debug your application.
 
+Lambda uses AWS and AWS proxy integration while EC2 uses http and http proxy integration
 
-
+Take note that the name of the bucket used for Transfer Acceleration must be DNS-compliant and must not contain periods (“.”).
 
 
 
