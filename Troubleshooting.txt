@@ -10,3 +10,25 @@ To determine whether a resource has drifted, CloudFormation determines the expec
 
 You can then take corrective action so that your stack resources are again in sync with their definitions in the stack template, such as updating the drifted resources directly so that they agree with their template definition. Resolving drift helps to ensure configuration consistency and successful stack operations.
 
+
+Xray Advantages
+  >Troubleshoot performance (bottlenecks)
+  >Understand dependencies of the microservice architecture
+  >Pinpoint service issues
+  >Review request behavior
+  >find error and exceptions
+  >are we meeting time SLA
+  >throttling
+  >identify users impacted
+
+
+Segments: sent by each application /service
+Subsegments : more granular details of segments
+Trace : segments collected together to form an end to end trace
+Sampling : decrease the amount of requests sent to xray
+Annotations : key/value pair used to index traces for filtering
+Metadata : key/value pair, not indexed and not used for searching
+
+
+
+
