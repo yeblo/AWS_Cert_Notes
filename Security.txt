@@ -1,1 +1,4 @@
+Identity pool is to Authentication eg third pary apps or OAuth
+while 
+User pool is for Authorization
 
