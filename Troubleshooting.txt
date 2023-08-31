@@ -30,5 +30,7 @@ Annotations : key/value pair used to index traces for filtering
 Metadata : key/value pair, not indexed and not used for searching
 
 
+Amazon CloudWatch is a monitoring service that allows you to monitor your applications, respond to system-wide performance changes, optimize resource utilization, and get a unified view of operational health. It is used to monitor your applications' performance and metrics.
+
 
 
